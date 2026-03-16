@@ -31,11 +31,15 @@ nav{
     color: white;
     font-size: 18px;
     display: block;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 
     transition: transform 0.5s ease-in-out;
 }
 .item a:hover{
-    transform: scale(1.1);
+    transform: scale(1.07);
     color: burlywood;
 }
 .item a::after{
@@ -62,6 +66,9 @@ content: "";
 
 .container{
     display: grid;
+
+    animation: subir 0.5s ease-in-out;
+    animation-timeline: view();
 }
 .banner{
     position: relative;
@@ -71,6 +78,8 @@ content: "";
 .banner img{
     width: 100%;
     display: block;
+
+    animation: aparecer 0.8s ease;
 }
 
 .overlay{
@@ -82,37 +91,39 @@ content: "";
     display: flex;
     justify-content: start;
     align-items: end;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     grid-area: 1/1;
     z-index: 2000;
 
-    animation: subir 0.5s ease;
-    animation-timeline: scroll();
+    animation: entrada 0.8s ease-in;
 }
 .titulo p{
-    font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+     font-family: "Lobster", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-    font-size: 35px;
-    color: wheat;
-    margin-left: 30px;
+    font-size: 45px;
+    color: rgb(252, 237, 210);
+    margin-left: 20px;
 }
-@keyframes subir{
+@keyframes aparecer{
     from{
-        transform: translateY(0);
-        opacity: 1;
+        opacity: 0;
     }
     to{
-        transform: translateY(-50px);
-        opacity: 0.5;
+        opacity: 1;
+    }
+}
+@keyframes entrada{
+    from{
+        transform: translateX(-150px);
+    }
+    to{
+        transform: translateX(0px);
     }
 }
 
 .horizontal-section {
-  height: 500vh;
+  height: 300vh;
 }
 
 .sticky-wrapper {
@@ -366,9 +377,6 @@ button{
     margin-top: 20px;
 
     transition: transform 0.5s ease-in-out;
-
-    animation: mexer 0.5s ease;
-    animation-timeline: view();
 }
 .cardAmamentar img:hover{
     cursor: pointer;
@@ -379,6 +387,9 @@ button{
     justify-self: center;
     align-items: center;
     gap: 30px;
+
+    animation: mexer 0.5s ease;
+    animation-timeline: view();
 }
 
 
@@ -413,6 +424,9 @@ button{
     justify-self: center;
     align-items: center;
     gap: 30px;
+
+    animation: mexer 0.5s ease;
+    animation-timeline: view();
 }
 .cardCortinado img{
     display: block;
@@ -424,8 +438,6 @@ button{
 
     transition: transform 0.5s ease-in-out;
 
-    animation: mexer 0.5s ease;
-    animation-timeline: view();
 }
 .cardCortinado img:hover{
     cursor: pointer;
@@ -470,28 +482,33 @@ button{
 }
 .container7{
     background: white;
-    height: 600px;
+    height: 650px;
 }
 .cards3{
     display: flex;
     justify-self: center;
     align-items: center;
     gap: 30px;
+
+    animation: mexer2 0.5s ease;
+    animation-timeline: view();
+}
+.cardDossel{
+    background: rgb(245, 235, 220);
+    border-radius: 20px;
+
+
+    transition: transform 0.3s ease-in-out;
 }
 .cardDossel img{
     display: block;
     width: 350px;
     height: 450px;
-    box-shadow: 1px 2px 10px;
-    border-radius: 20px;
-    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
-    transition: transform 0.5s ease-in-out;
-
-    animation: mexer2 0.5s ease;
-    animation-timeline: view();
 }
-.cardDossel img:hover{
+.cardDossel:hover{
     cursor: pointer;
     transform: scale(1.02);
 }
@@ -541,7 +558,8 @@ button{
 .carroselInterno3{
     display: flex;
     flex-direction: row;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 20px;
     scroll-behavior: smooth;
 }
@@ -652,6 +670,10 @@ button{
     font-weight: 300;
     font-style: normal;
 }
+.cards4{
+    animation: mexer2 0.5s ease;
+    animation-timeline: view();
+}
 
 
 
@@ -684,6 +706,9 @@ button{
     justify-self: center;
     align-items: center;
     gap: 30px;
+
+    animation: mexer 0.5s ease;
+    animation-timeline: view();
 }
 .cardNinho img{
     display: block;
@@ -706,4 +731,77 @@ button{
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+#categoria9{
+    text-align: center;
+    position: relative;
+    top: 20px;
+
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.container11{
+    background: white;
+    height: 600px;
+}
+.container11 p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+.cards6{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 30px;
+
+    animation: opacidadeSubir 0.5s ease;
+    animation-timeline: view();
+}
+.cardKitBerco img{
+    display: block;
+    width: 350px;
+    height: 450px;
+    box-shadow: 1px 2px 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    transition: transform 0.5s ease-in-out;
+}
+.cardKitBerco img:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.cards6 p{
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+@keyframes opacidadeSubir{
+    from{
+        opacity: 0.3;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

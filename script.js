@@ -43,3 +43,22 @@ prev2.addEventListener("click", ()=>{
 });
 
 
+const mais = document.querySelector(".more");
+const destino = document.getElementById("desejados");
+function aumentar(){
+  mais.style.transform = "scale(1.01)";
+}
+function diminuir(){
+  mais.style.transform = "scale(1)";
+}
+mais.addEventListener("mouseover", aumentar);
+mais.addEventListener("mouseout", diminuir);
+
+mais.addEventListener("click", ()=>{
+  destino.scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+
+

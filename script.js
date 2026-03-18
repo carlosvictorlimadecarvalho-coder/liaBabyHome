@@ -61,4 +61,18 @@ mais.addEventListener("click", ()=>{
 });
 
 
+const hamburguer = document.getElementById("hamburguer");
+const navbar2 = document.getElementById("navbar2");
+
+hamburguer.addEventListener("click", ()=>{
+  navbar2.classList.toggle("ativo");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navbar2.contains(e.target) && !hamburguer.contains(e.target)) {
+    navbar2.classList.remove("ativo");
+  }
+});
+
+
 
